@@ -8,18 +8,14 @@ from ndwi_module import compute_ndwi, masking
 from ndwi_analysis import show_ndwi_maps, analyze_ndwi
 from cluster_analysis import build_cluster_map, show_cluster_map, analyze_clusters
 from kmeans_module import KMeans, elbow_method
-from config import SENT_DIR,LANDSAT_DIR, OUTPUT_DIR, NDWI_THRESHOLD, N_CLUSTERS, DOWNSAMPLE, PIXEL_SIZE, n_blue, n_green, n_red, n_nir, k_max
+from config import DATA_DIR, OUTPUT_DIR, NDWI_THRESHOLD, N_CLUSTERS, DOWNSAMPLE, PIXEL_SIZE, n_blue, n_green, n_red, n_nir, k_max
 
 # === STEP 1: Locate Bands ===
-blue = find_band(SENT_DIR, n_blue)  #blue
-green = find_band(SENT_DIR, n_green)  #green
-red = find_band(SENT_DIR, n_red)  #red
-nir = find_band(SENT_DIR, n_nir)  #nir
+blue = find_band(DATA_DIR, n_blue)  #blue
+green = find_band(DATA_DIR, n_green)  #green
+red = find_band(DATA_DIR, n_red)  #red
+nir = find_band(DATA_DIR, n_nir)  #nir
 
-# blue = find_band(LANDSAT_DIR, n_blue)  #blue
-# green = find_band(LANDSAT_DIR, n_green)  #green
-# red = find_band(LANDSAT_DIR, n_red)  #red
-# nir = find_band(LANDSAT_DIR, n_nir)  #nir
 print("Bands found:\n", blue, "\n", green, "\n", red, "\n", nir)
 
 # === STEP 2: Read Bands ===
@@ -31,7 +27,7 @@ if blue and red:
     blue, _ = read_band(blue, DOWNSAMPLE)
     red, _  = read_band(red, DOWNSAMPLE)
     rbg_mask = (green==0) | (blue==0)| (red==0)
-    rgb = np.dstack((stretch(red), stretch(green), stretch(blue)))# if black background comes then it will happen
+    rgb = np.dstack((stretch(red), stretch(green), stretch(blue)))
     rgb[rbg_mask] = np.nan
 
     
