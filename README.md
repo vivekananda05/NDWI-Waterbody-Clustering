@@ -145,7 +145,7 @@ Then open the browser UI to:
 
 Install dependencies via:
 ```bash
-pip install numpy matplotlib pandas seaborn rasterio streamlit
+pip install requirements.txt
 ```
 
 ---
