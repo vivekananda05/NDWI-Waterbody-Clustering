@@ -16,7 +16,7 @@ The pipeline performs the following steps:
 2. **NDWI Computation**
    - Computes NDWI using the formula:
      \[
-     \text{NDWI} = \frac{Green - NIR}{Green + NIR}
+     \text{NDWI} = \frac{Green - NIR}/{Green + NIR}
      \]
    - Handles nodata pixels and scales NDWI between -1 and 1.
 
