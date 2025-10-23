@@ -114,29 +114,21 @@ Then open the browser UI to:
 
 ##  Outputs
 
-| Output File | Description |
-|--------------|-------------|
-| `rgb_image.png` | Original RGB composite |
-| `ndwi_map.png` | NDWI index map |
-| `ndwi_water_nonwater.png` | Water vs Non-water separation |
-| `ndwi_histogram.png` | NDWI distribution histogram |
-| `ndwi_analysis_summary.csv` | NDWI statistics and area calculations |
-| `kmeans_cluster_map.png` | Clustered waterbody map |
-| `cluster_summary.csv` | Cluster statistics (mean NDWI, area, etc.) |
-| `cluster_ndwi_distribution.png` | NDWI density plot per cluster |
-| `cluster_area_distribution.png` | Pie chart of area share per cluster |
-| `elbow_plot.png` | Elbow method visualization |
 
----
+
 | Output Type | Description | Example |
 |--------------|-------------|----------|
-| **Original RGB Image** | Satellite RGB composite used for NDWI calculation | ![RGB Image](Sentinel_output/rgb_image.png) |
-| **NDWI Map** | NDWI values visualized to identify potential water regions | ![NDWI Map](Sentinel_output/ndwi_map.png) |
-| **Water vs Non-Water Mask** | Separation of water pixels based on threshold | ![Water Mask](Sentinel_output/ndwi_water_nonwater.png) |
-| **Histogram of NDWI** | NDWI pixel value distribution | ![NDWI Histogram](Sentinel_output/ndwi_histogram.png) |
-| **Clustered Waterbody Map** | K-Means clustering result on water pixels | ![Cluster Map](Sentinel_output/kmeans_cluster_map.png) |
-| **Cluster Area Distribution** | Cluster-wise area coverage pie chart | ![Area Distribution](Sentinel_output/cluster_area_distribution.png) |
-| **Elbow Plot** | Optimal K detection via WCSS curve | ![Elbow Plot](Sentinel_output/elbow_plot.png) |
+| **Original RGB Image** | Original RGB composite | <img src="Sentinel_output/rgb_image.png" width="300"> |
+| **NDWI Map** | NDWI values visualized to identify potential water regions | <img src="Sentinel_output/ndwi_map.png" width="300"> |
+| **Water vs Non-Water Mask** | Separation of water pixels based on threshold | <img src="Sentinel_output/ndwi_water_nonwater.png" width="300"> |
+| **Histogram of NDWI** | NDWI pixel value distribution | <img src="Sentinel_output/ndwi_histogram.png" width="300"> |
+| **Clustered Waterbody Map** | K-Means clustering result on water pixels | <img src="Sentinel_output/kmeans_cluster_map.png" width="300"> |
+| **Cluster Area Distribution** | Cluster-wise area coverage pie chart | <img src="Sentinel_output/cluster_area_distribution.png" width="300"> |
+| **Elbow Plot** | Optimal K detection via WCSS curve | <img src="Sentinel_output/elbow_plot.png" width="300"> |
+
+---
+
+
 
 ##  Dependencies
 
