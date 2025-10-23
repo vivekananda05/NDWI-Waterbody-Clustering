@@ -131,7 +131,7 @@ Then open the browser UI to:
 |--------------|-------------|----------|
 | **Original RGB Image** | Original RGB composite | <img src="Landsat_output/rgb_image.png" width="300"> |
 | **NDWI Map** | NDWI values visualized to identify potential water regions | <img src="Landsat_output/ndwi_map.png" width="300"> |
-| **Water vs Non-Water Mask** | Separation of water pixels based on threshold | <img src="Lansat_output/ndwi_water_nonwater.png" width="300"> |
+| **Water vs Non-Water Mask** | Separation of water pixels based on threshold | <img src="Landsat_output/ndwi_water_nonwater.png" width="300"> |
 | **Histogram of NDWI** | NDWI pixel value distribution | <img src="Landsat_output/ndwi_histogram.png" width="300"> |
 | **Clustered Waterbody Map** | K-Means clustering result on water pixels | <img src="Landsat_output/kmeans_cluster_map.png" width="300"> |
 | **Cluster Area Distribution** | Cluster-wise area coverage pie chart | <img src="Landsat_output/cluster_area_distribution.png" width="300"> |
