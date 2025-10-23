@@ -14,10 +14,7 @@ The pipeline performs the following steps:
    - Supports both `.TIF` and `.jp2` formats.
 
 2. **NDWI Computation**
-   - Computes NDWI using the formula:
-     \[
-     \text{NDWI} = \frac{Green - NIR}/{Green + NIR}
-     \]
+   - Computes NDWI using the formula: `NDWI = (Green - NIR) / (Green + NIR)`
    - Handles nodata pixels and scales NDWI between -1 and 1.
 
 3. **Threshold-Based Masking**
