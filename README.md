@@ -112,9 +112,7 @@ Then open the browser UI to:
 
 ---
 
-##  Outputs
-
-
+##  Outputs for Sentinel
 
 | Output Type | Description | Example |
 |--------------|-------------|----------|
@@ -125,6 +123,19 @@ Then open the browser UI to:
 | **Clustered Waterbody Map** | K-Means clustering result on water pixels | <img src="Sentinel_output/kmeans_cluster_map.png" width="300"> |
 | **Cluster Area Distribution** | Cluster-wise area coverage pie chart | <img src="Sentinel_output/cluster_area_distribution.png" width="300"> |
 | **Elbow Plot** | Optimal K detection via WCSS curve | <img src="Sentinel_output/elbow_plot.png" width="300"> |
+
+
+##  Outputs for Landsat
+
+| Output Type | Description | Example |
+|--------------|-------------|----------|
+| **Original RGB Image** | Original RGB composite | <img src="Landsat_output/rgb_image.png" width="300"> |
+| **NDWI Map** | NDWI values visualized to identify potential water regions | <img src="Landsat_output/ndwi_map.png" width="300"> |
+| **Water vs Non-Water Mask** | Separation of water pixels based on threshold | <img src="Lansat_output/ndwi_water_nonwater.png" width="300"> |
+| **Histogram of NDWI** | NDWI pixel value distribution | <img src="Landsat_output/ndwi_histogram.png" width="300"> |
+| **Clustered Waterbody Map** | K-Means clustering result on water pixels | <img src="Landsat_output/kmeans_cluster_map.png" width="300"> |
+| **Cluster Area Distribution** | Cluster-wise area coverage pie chart | <img src="Landsat_output/cluster_area_distribution.png" width="300"> |
+| **Elbow Plot** | Optimal K detection via WCSS curve | <img src="Landsat_output/elbow_plot.png" width="300"> |
 
 ---
 
