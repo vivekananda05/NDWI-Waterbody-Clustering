@@ -61,9 +61,9 @@ The pipeline performs the following steps:
 ├── 📄 kmeans_module.py       # Custom K-Means implementation & elbow method
 ├── 📄cluster_analysis.py     # Cluster building, visualization & analysis
 │
-├── 📁 IMG_DATA/              # Sentinel-2 image folder
+├── 📁 Sentinel_data/         # Sentinel-2 image folder
 ├── 📁 Landsat_data/          # Landsat image folder
-│
+├── 📁 Landsat_output/ 
 ├── 📁 Sentinel_output/       # Output folder (NDWI maps, clusters, CSVs)
 │
 └── 📄 README.md              # Project documentation
