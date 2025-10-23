@@ -116,7 +116,7 @@ Then open the browser UI to:
 
 | Output File | Description |
 |--------------|-------------|
-| `rgb_image.png` | Original RGB composite |![RGB Image](sentinel_output/rgb_image.png) |
+| `rgb_image.png` | Original RGB composite |
 | `ndwi_map.png` | NDWI index map |
 | `ndwi_water_nonwater.png` | Water vs Non-water separation |
 | `ndwi_histogram.png` | NDWI distribution histogram |
@@ -128,6 +128,15 @@ Then open the browser UI to:
 | `elbow_plot.png` | Elbow method visualization |
 
 ---
+| Output Type | Description | Example |
+|--------------|-------------|----------|
+| **Original RGB Image** | Satellite RGB composite used for NDWI calculation | ![RGB Image](Sentinel_output/rgb_image.png) |
+| **NDWI Map** | NDWI values visualized to identify potential water regions | ![NDWI Map](Sentinel_output/ndwi_map.png) |
+| **Water vs Non-Water Mask** | Separation of water pixels based on threshold | ![Water Mask](Sentinel_output/ndwi_water_nonwater.png) |
+| **Histogram of NDWI** | NDWI pixel value distribution | ![NDWI Histogram](Sentinel_output/ndwi_histogram.png) |
+| **Clustered Waterbody Map** | K-Means clustering result on water pixels | ![Cluster Map](Sentinel_output/kmeans_cluster_map.png) |
+| **Cluster Area Distribution** | Cluster-wise area coverage pie chart | ![Area Distribution](Sentinel_output/cluster_area_distribution.png) |
+| **Elbow Plot** | Optimal K detection via WCSS curve | ![Elbow Plot](Sentinel_output/elbow_plot.png) |
 
 ##  Dependencies
 
