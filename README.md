@@ -1,5 +1,7 @@
 #  NDWI-Based Waterbody Detection & K-Means Clustering
 
+**Live App:** [NDWI Waterbody Clustering on Streamlit Cloud](https://ndwi-waterbody-clustering-app.streamlit.app/)
+
 This project analyzes satellite images to **detect and cluster waterbodies** using the **Normalized Difference Water Index (NDWI)** and **K-Means clustering**.  
 It allows users to mask non-water pixels based on a NDWI threshold, and then cluster the remaining water pixels to study intra-waterbody variations.
 
