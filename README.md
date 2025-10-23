@@ -116,7 +116,7 @@ Then open the browser UI to:
 
 | Output File | Description |
 |--------------|-------------|
-| `rgb_image.png` | Original RGB composite |
+| `rgb_image.png` | Original RGB composite |![RGB Image](Sentinel_output/rgb_image.png) |
 | `ndwi_map.png` | NDWI index map |
 | `ndwi_water_nonwater.png` | Water vs Non-water separation |
 | `ndwi_histogram.png` | NDWI distribution histogram |
