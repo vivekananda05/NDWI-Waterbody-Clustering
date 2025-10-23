@@ -10,7 +10,7 @@ It allows users to mask non-water pixels based on a NDWI threshold, and then clu
 The pipeline performs the following steps:
 
 1. **Band Detection & Reading**
-   - Automatically locates required spectral bands (`Blue`, `Green`, `Red`, `NIR`) for **Landsat** or **Sentinel-2** imagery.
+   - Automatically locates required spectral bands (`Blue`, `Green`, `Red`, `NIR`) for **Landsat-8/9** or **Sentinel-2** imagery.
    - Supports both `.TIF` and `.jp2` formats.
 
 2. **NDWI Computation**
