@@ -101,9 +101,9 @@ Then open the browser UI to:
 
 | Parameter | Description | Example |
 |------------|-------------|----------|
-| `SENT_DIR` | Sentinel image directory | `"IMG_DATA"` |
+| `SENT_DIR` | Sentinel image directory | `"Sentilen_data"` |
 | `LANDSAT_DIR` | Landsat image directory | `"Landsat_data"` |
-| `OUTPUT_DIR` | Output directory for all results | `"Sentinel_output"` |
+| `OUTPUT_DIR` | Output directory for all results | `"Sentinel_output" / "Landsat_output"` |
 | `NDWI_THRESHOLD` | NDWI cutoff for masking | `0.0` |
 | `N_CLUSTERS` | Number of clusters for K-Means | `3` |
 | `PIXEL_SIZE` | Pixel resolution (m) | `10` or `30` |
@@ -140,7 +140,7 @@ pip install numpy matplotlib pandas seaborn rasterio streamlit
 
 ##  Example Workflow
 
-1. Place Sentinel or Landsat bands inside `IMG_DATA` or `Landsat_data` folder.
+1. Place Sentinel or Landsat bands inside `Sentinel_data` or `Landsat_data` folder.
 2. Adjust `config.py` (e.g., pixel size, NDWI threshold).
 3. Run `main.py` or launch Streamlit via `app.py`.
 4. Check results inside the specified `OUTPUT_DIR`.
