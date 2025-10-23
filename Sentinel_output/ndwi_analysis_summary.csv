@@ -1,0 +1,2 @@
+Mean_NDWI,Median_NDWI,Std_NDWI,Min_NDWI,Max_NDWI,User_Threshold,Otsu_Threshold,Water_Pixels,Non_Water_Pixels,Water_Area_km2,Non_Water_Area_km2
+0.16771406,0.41929322,0.40638822,-0.65797627,0.97808766,0.0,0.07377888,4665466,2869553,7464.7456,4591.2848
