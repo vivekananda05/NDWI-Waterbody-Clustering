@@ -1,11 +1,11 @@
-# 🌊 NDWI-Based Waterbody Detection & K-Means Clustering
+#  NDWI-Based Waterbody Detection & K-Means Clustering
 
 This project analyzes satellite images to **detect and cluster waterbodies** using the **Normalized Difference Water Index (NDWI)** and **K-Means clustering**.  
 It allows users to mask non-water pixels based on a NDWI threshold, and then cluster the remaining water pixels to study intra-waterbody variations.
 
 ---
 
-## 🧩 Project Overview
+##  Project Overview
 
 The pipeline performs the following steps:
 
@@ -46,7 +46,7 @@ The pipeline performs the following steps:
 
 ---
 
-## 🧱 Project Structure
+##  Project Structure
 
 ```
 📁 NDWI-Waterbody-Clustering/
@@ -72,9 +72,9 @@ The pipeline performs the following steps:
 
 ---
 
-## 🧭 Running the Project
+##  Running the Project
 
-### ▶️ 1. Using the Python Script
+###  1. Using the Python Script
 ```bash
 python main.py
 ```
@@ -85,7 +85,7 @@ This script will:
 - Cluster water pixels using K-Means
 - Save all analysis outputs under `OUTPUT_DIR`
 
-### ▶️ 2. Using the Streamlit App
+###  2. Using the Streamlit App
 ```bash
 streamlit run app.py
 ```
@@ -98,7 +98,7 @@ Then open the browser UI to:
 
 ---
 
-## 🧪 Key Parameters (from `config.py`)
+##  Key Parameters (from `config.py`)
 
 | Parameter | Description | Example |
 |------------|-------------|----------|
@@ -113,7 +113,7 @@ Then open the browser UI to:
 
 ---
 
-## 📊 Outputs
+##  Outputs
 
 | Output File | Description |
 |--------------|-------------|
@@ -130,7 +130,7 @@ Then open the browser UI to:
 
 ---
 
-## 🧠 Dependencies
+##  Dependencies
 
 Install dependencies via:
 ```bash
@@ -139,7 +139,7 @@ pip install numpy matplotlib pandas seaborn rasterio streamlit
 
 ---
 
-## 📍 Example Workflow
+##  Example Workflow
 
 1. Place Sentinel or Landsat bands inside `IMG_DATA` or `Landsat_data` folder.
 2. Adjust `config.py` (e.g., pixel size, NDWI threshold).
