@@ -41,7 +41,7 @@ The pipeline performs the following steps:
    - Performs cluster-wise NDWI statistical analysis.
    - Saves cluster summaries and area distribution plots.
 
-7. **Elbow Method (Optional)**
+7. **Elbow Method**
    - Finds optimal K value for K-Means clustering using **WCSS-based elbow detection**.
 
 ---
