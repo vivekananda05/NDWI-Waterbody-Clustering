@@ -55,12 +55,11 @@ The pipeline performs the following steps:
 ├── 📄 app.py                 # Streamlit web app for interactive visualization
 ├── 📄 config.py              # Configuration file (paths, thresholds, band settings)
 │
-├── 📁 modules/
-│   ├── 📄 utils.py           # Utility functions (find, read, stretch bands)
-│   ├── 📄 ndwi_module.py     # NDWI computation & water masking
-│   ├── 📄 ndwi_analysis.py   # NDWI visualization, Otsu thresholding & stats
-│   ├── 📄 kmeans_module.py   # Custom K-Means implementation & elbow method
-│   └── 📄 cluster_analysis.py# Cluster building, visualization & analysis
+├── 📄 utils.py               # Utility functions (find, read, stretch bands)
+├── 📄 ndwi_module.py         # NDWI computation & water masking
+├── 📄 ndwi_analysis.py       # NDWI visualization, Otsu thresholding & stats
+├── 📄 kmeans_module.py       # Custom K-Means implementation & elbow method
+├── 📄cluster_analysis.py     # Cluster building, visualization & analysis
 │
 ├── 📁 IMG_DATA/              # Sentinel-2 image folder
 ├── 📁 Landsat_data/          # Landsat image folder
