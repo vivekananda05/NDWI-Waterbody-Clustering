@@ -94,7 +94,7 @@ if run_button:
     st.subheader(" Visualization")
 
     if rgb is not None:
-        st.markdown("### RGB Image")
+        st.markdown("<h3 style='text-align: center;'>RGB Image</h3>", unsafe_allow_html=True)
         st.image(rgb)
 
     # NDWI Map
