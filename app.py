@@ -94,7 +94,7 @@ if run_button:
     st.subheader(" Visualization")
 
     if rgb is not None:
-        st.image(rgb, caption="Original RGB Image")
+        st.image(rgb)
 
     # NDWI Map
     fig, ax = plt.subplots(figsize=(7,5))
