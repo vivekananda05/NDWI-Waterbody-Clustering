@@ -94,6 +94,7 @@ if run_button:
     st.subheader(" Visualization")
 
     if rgb is not None:
+        st.markdown("### RGB Image")
         st.image(rgb)
 
     # NDWI Map
