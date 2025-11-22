@@ -10,6 +10,56 @@ from kmeans_module import KMeans
 from cluster_analysis import build_cluster_map
 from ndwi_analysis import otsu_threshold
 
+
+# ============================================================
+# Modified Elbow Method (Streamlit Version - No File Saving)
+# ============================================================
+
+def elbow_method_streamlit(data, k_max=10, max_iters=100, tol=1e-4, random_state=42):
+    data = np.array(data).ravel()
+    wcss_values = []
+    k_values = list(range(1, k_max + 1))
+
+    for k in k_values:
+        model = KMeans(K=k, max_iters=max_iters, tol=tol, random_state=random_state)
+        model.fit(data)
+        wcss_values.append(model.wcss)
+
+    elbow_k = find_elbow_point(k_values, wcss_values)
+    fig = elbow_plot_streamlit(elbow_k, k_values, wcss_values)
+
+    return elbow_k, wcss_values, fig
+
+
+def find_elbow_point(k_values, wcss):
+    x = np.array(k_values)
+    y = np.array(wcss)
+
+    p1, p2 = np.array([x[0], y[0]]), np.array([x[-1], y[-1]])
+    line_vec = p2 - p1
+    line_len = np.linalg.norm(line_vec)
+
+    distances = np.abs(np.cross(line_vec, np.vstack([x - x[0], y - y[0]]).T)) / line_len
+
+    return x[np.argmax(distances)]
+
+
+def elbow_plot_streamlit(elbow_k, k_values, wcss):
+    fig, ax = plt.subplots(figsize=(6, 4))
+    ax.plot(k_values, wcss, 'bo-', markersize=6)
+    ax.scatter(
+        elbow_k,
+        wcss[list(k_values).index(elbow_k)],
+        s=200, facecolors='none', edgecolors='r',
+        label=f'Optimal K = {elbow_k}'
+    )
+    ax.set_xlabel("Number of Clusters (K)")
+    ax.set_ylabel("WCSS")
+    ax.set_title("Elbow Method")
+    ax.legend()
+    ax.grid(True)
+    return fig
+
 # ---------------- APP HEADER ----------------
 st.set_page_config(page_title="NDWI + KMeans Analyzer", layout="wide")
 st.title(" NDWI & K-Means Water Body Clustering")
@@ -32,7 +82,6 @@ else:
     pixel_size = 10
 
 
-
 # ---------------- BAND UPLOADS ----------------
 st.sidebar.header("Upload Bands")
 
@@ -51,7 +100,9 @@ else:
 st.sidebar.header("Parameters")
 threshold = st.sidebar.slider("NDWI Threshold", -1.0, 1.0, 0.0, 0.05)
 k_value   = st.sidebar.slider("K-Means Clusters (K)", 2, 10, 3, 1)
-downsample = st.sidebar.number_input("Downsample Factor", 1, 10, 2)
+downsample = st.sidebar.number_input("Downsample Factor", 1, 10, 1)
+k_range_max = st.sidebar.slider("Max K for Elbow Test", 3, 15, 5)
+
 
 run_button = st.sidebar.button(" Run Analysis")
 
@@ -94,8 +145,7 @@ if run_button:
     st.subheader(" Visualization")
 
     if rgb is not None:
-        st.markdown("<h3 style='text-align: center;'>RGB Image</h3>", unsafe_allow_html=True)
-        st.image(rgb)
+        st.image(rgb, caption="Original RGB Image")
 
     # NDWI Map
     fig, ax = plt.subplots(figsize=(7,5))
@@ -241,5 +291,18 @@ if run_button:
            autopct='%1.1f%%', startangle=90)
     ax.set_title("Cluster Area Distribution (%)")
     st.pyplot(fig)
+    #Elbow
+    st.subheader("Elbow Method (Best K Suggestion)")
+    
+    water_vals = ndwi[non_mask]
+    water_vals = water_vals[np.isfinite(water_vals)]
+
+    if len(water_vals) < 5:
+        st.warning("Not enough valid pixels to run elbow method.")
+    else:
+        optimal_k, wcss_values, elbow_fig = elbow_method_streamlit(water_vals, k_max=int(k_range_max))
+
+        st.pyplot(elbow_fig)
+        st.success(f" Recommended K based on Elbow Method: **{optimal_k}**")
 
     st.success(" NDWI + K-Means Analysis Completed!")
