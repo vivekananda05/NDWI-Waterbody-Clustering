@@ -47,6 +47,7 @@ The pipeline performs the following steps:
 
 ## Dataset Description
 
+Sentinel-2 data: 
 ---
 
 ##  Project Structure
