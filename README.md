@@ -47,7 +47,8 @@ The pipeline performs the following steps:
 
 ## Dataset Description
 
-Sentinel- data:
+Sentinel-2 data: Region - Mumbai coastal, pixel resolution = 10 m, band2 - blue, band3 - green, band4 - red, band8 - nir.
+Landsat-9 data: Region - West Bengal coastal, pixel resolution = 30 m, band2 - blue, band3 - green, band4 - red, band5 - nir.
 
 ---
 
