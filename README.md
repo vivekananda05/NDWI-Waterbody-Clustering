@@ -35,7 +35,7 @@ The pipeline performs the following steps:
    - Saves outputs as CSV and histogram plots.
 
 6. **K-Means Clustering**
-   - Clusters water pixels (NDWI > threshold) into **K user-defined clusters**.
+   - Clusters water pixels of Red, Green, Blue and NIR bands ( where NDWI > threshold) into **K user-defined clusters**.
    - Produces a color-coded **cluster map**.
    - Performs cluster-wise NDWI statistical analysis.
    - Saves cluster summaries and area distribution plots.
