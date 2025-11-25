@@ -115,7 +115,7 @@ Then open the browser UI to:
 
 | Output Type | Description | Example |
 |--------------|-------------|----------|
-| **Original RGB Image** | Original RGB composite | <img src="Sentinel_output/rgb_image.png" width="300"> |
+| **FCC Image** | Original RGB composite | <img src="Sentinel_output/fcc_image.png" width="300"> |
 | **NDWI Map** | NDWI values visualized to identify potential water regions | <img src="Sentinel_output/ndwi_map.png" width="300"> |
 | **Water vs Non-Water Mask** | Separation of water pixels based on threshold | <img src="Sentinel_output/ndwi_water_nonwater.png" width="300"> |
 | **Histogram of NDWI** | NDWI pixel value distribution | <img src="Sentinel_output/ndwi_histogram.png" width="300"> |
@@ -128,7 +128,7 @@ Then open the browser UI to:
 
 | Output Type | Description | Example |
 |--------------|-------------|----------|
-| **Original RGB Image** | Original RGB composite | <img src="Landsat_output/rgb_image.png" width="300"> |
+| **FCC Image** | False Colour composite | <img src="Landsat_output/fcc_image.png" width="300"> |
 | **NDWI Map** | NDWI values visualized to identify potential water regions | <img src="Landsat_output/ndwi_map.png" width="300"> |
 | **Water vs Non-Water Mask** | Separation of water pixels based on threshold | <img src="Landsat_output/ndwi_water_nonwater.png" width="300"> |
 | **Histogram of NDWI** | NDWI pixel value distribution | <img src="Landsat_output/ndwi_histogram.png" width="300"> |
