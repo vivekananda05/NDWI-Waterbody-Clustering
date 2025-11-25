@@ -26,7 +26,7 @@ The pipeline performs the following steps:
      - Non-water regions (NDWI ≤ threshold)
 
 4. **Visualization**
-   - Generates RGB previews, NDWI maps, and water/non-water separation visualizations.
+   - Generates False Colour Composite (FCC) image, NDWI maps, and water/non-water separation visualizations.
 
 5. **NDWI Analysis**
    - Computes NDWI statistics (mean, median, std, min, max).
