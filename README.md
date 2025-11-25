@@ -45,6 +45,10 @@ The pipeline performs the following steps:
 
 ---
 
+## Dataset Description
+
+---
+
 ##  Project Structure
 
 ```
